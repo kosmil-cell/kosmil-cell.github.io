@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Team Factory – Pokémon team builder for Android</title>
-  <meta name="description" content="Team Factory is a Pokédex, roster manager and smart team builder for casual and competitive Pokémon players. Free on Google Play.">
+  <meta name="description" content="Team Factory is a Pokédex, Roster manager and smart team builder for casual and competitive Pokémon players. Free on Google Play.">
   <meta name="theme-color" content="#2D4369">
   <link rel="icon" type="image/png" href="icon.png">
   <meta property="og:title" content="Team Factory – Pokémon team builder">
-  <meta property="og:description" content="Pokédex, roster manager and smart team builder for casual and competitive players.">
+  <meta property="og:description" content="Pokédex, Roster manager and smart team builder for casual and competitive players.">
   <meta property="og:image" content="https://kosmil-cell.github.io/icon.png">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -157,22 +157,36 @@
       color: var(--muted);
     }
 
-    /* ---------- Annotated drawing ---------- */
+    /* ---------- Annotated screenshot ---------- */
     .drawing {
       position: relative;
       width: 100%;
       max-width: 660px;
-      aspect-ratio: 680 / 640;
+      aspect-ratio: 680 / 646;
       justify-self: end;
       margin: 0;
     }
 
-    .drawing .phone {
+    .hero-phone {
       position: absolute;
       left: 0;
       top: 0;
-      width: calc(330 / 680 * 100%);
-      height: 100%;
+      width: calc(300 / 680 * 100%);
+    }
+
+    .hero-frame {
+      padding: calc(11 / 300 * 100%);
+      border-radius: 34px;
+      background: var(--paper-night);
+      box-shadow: inset 0 0 0 2px rgba(245, 245, 238, 0.6), 0 24px 60px rgba(10, 18, 34, 0.45);
+    }
+
+    .hero-frame img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 540 / 1212;
+      border-radius: 25px;
+      background: #1C1D21;
     }
 
     .drawing .leaders {
@@ -211,9 +225,9 @@
 
     .callout {
       position: absolute;
-      left: calc(354 / 680 * 100%);
-      width: calc(326 / 680 * 100%);
-      top: calc(var(--y) / 640 * 100%);
+      left: calc(356 / 680 * 100%);
+      width: calc(324 / 680 * 100%);
+      top: calc(var(--y) / 646 * 100%);
       margin-top: -0.8rem;
     }
 
@@ -537,10 +551,9 @@
         justify-items: center;
       }
 
-      .drawing .phone {
+      .hero-phone {
         position: static;
-        width: min(280px, 78%);
-        height: auto;
+        width: min(280px, 80%);
       }
 
       .drawing .leaders { display: none; }
@@ -583,7 +596,7 @@
       <div class="wrap">
         <div class="hero-copy">
           <h1 class="hero-title">Build better Pokémon teams.</h1>
-          <p class="hero-lede">Team Factory is a Pokédex, roster manager and smart team builder for casual and competitive players.</p>
+          <p class="hero-lede">Team Factory is a Pokédex, Roster manager and smart team builder for casual and competitive players.</p>
           <a class="play-badge" href="https://play.google.com/store/apps/details?id=com.kntsesmelis.teamfactory">
             <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="207" height="80">
           </a>
@@ -591,143 +604,39 @@
         </div>
 
         <figure class="drawing">
-          <svg class="phone" viewBox="0 0 330 640" role="img" aria-label="Line drawing of the Team Factory team builder screen">
-            <g fill="none" stroke="#F5F5EE" stroke-linecap="round" stroke-linejoin="round">
-              <!-- body -->
-              <rect x="30" y="20" width="270" height="600" rx="40" stroke-width="2" fill="rgba(26,41,70,0.6)"/>
-              <path d="M301 150v46M301 214v28" stroke-width="3"/>
-              <rect x="42" y="32" width="246" height="576" rx="30" stroke-opacity="0.55" stroke-width="1.25"/>
-              <circle cx="165" cy="50" r="5" stroke-opacity="0.7" stroke-width="1.25"/>
-            </g>
+          <div class="hero-phone">
+            <div class="hero-frame">
+              <img src="screens/team-builder.webp" width="540" height="1212" alt="The Team Factory team builder: a Pokémon with its ability, item and four moves, and suggestions for roles the team still needs">
+            </div>
+          </div>
 
-            <g fill="#C3CAD6">
-              <!-- app bar -->
-              <rect x="56" y="66" width="88" height="12" rx="6" fill-opacity="0.6"/>
-            </g>
-            <g fill="none" stroke="#C3CAD6" stroke-width="1.25" stroke-opacity="0.8">
-              <circle cx="238" cy="72" r="7"/>
-              <circle cx="262" cy="72" r="7"/>
-            </g>
-
-            <!-- team slots -->
-            <g fill="none" stroke="#C3CAD6" stroke-width="1.25">
-              <rect x="54" y="98" width="68" height="72" rx="10"/>
-              <rect x="131" y="98" width="68" height="72" rx="10"/>
-              <rect x="208" y="98" width="68" height="72" rx="10"/>
-              <rect x="54" y="180" width="68" height="72" rx="10"/>
-              <rect x="131" y="180" width="68" height="72" rx="10"/>
-              <circle cx="88" cy="126" r="15"/>
-              <circle cx="165" cy="126" r="15"/>
-              <circle cx="242" cy="126" r="15"/>
-              <circle cx="88" cy="208" r="15"/>
-              <circle cx="165" cy="208" r="15"/>
-            </g>
-            <g fill="#C3CAD6" fill-opacity="0.45">
-              <rect x="68" y="150" width="40" height="6" rx="3"/>
-              <rect x="145" y="150" width="40" height="6" rx="3"/>
-              <rect x="222" y="150" width="40" height="6" rx="3"/>
-              <rect x="68" y="232" width="40" height="6" rx="3"/>
-              <rect x="145" y="232" width="40" height="6" rx="3"/>
-            </g>
-            <!-- empty slot -->
-            <g fill="none" stroke="#D9AE3E" stroke-width="1.5" stroke-linecap="round">
-              <rect x="208" y="180" width="68" height="72" rx="10" stroke-dasharray="5 5"/>
-              <path d="M242 206v20M232 216h20"/>
-            </g>
-
-            <!-- role tags -->
-            <g fill="none" stroke="#C3CAD6" stroke-width="1.25">
-              <rect x="54" y="266" width="52" height="18" rx="9"/>
-              <rect x="112" y="266" width="60" height="18" rx="9"/>
-              <rect x="178" y="266" width="44" height="18" rx="9"/>
-            </g>
-            <g fill="#C3CAD6" fill-opacity="0.45">
-              <rect x="64" y="272" width="32" height="6" rx="3"/>
-              <rect x="122" y="272" width="40" height="6" rx="3"/>
-              <rect x="188" y="272" width="24" height="6" rx="3"/>
-            </g>
-            <rect x="228" y="266" width="48" height="18" rx="9" fill="none" stroke="#D9AE3E" stroke-width="1.5" stroke-dasharray="4 4"/>
-
-            <!-- rating -->
-            <rect x="54" y="300" width="222" height="92" rx="12" fill="none" stroke="#C3CAD6" stroke-width="1.25"/>
-            <path d="M70 374a34 34 0 0 1 68 0" fill="none" stroke="#C3CAD6" stroke-opacity="0.35" stroke-width="6" stroke-linecap="round"/>
-            <path d="M70 374a34 34 0 0 1 61.5 -20" fill="none" stroke="#D9AE3E" stroke-width="6" stroke-linecap="round"/>
-            <text x="104" y="378" text-anchor="middle" fill="#F5F5EE" font-family="Big Shoulders, Arial Narrow, sans-serif" font-weight="800" font-size="28">82</text>
-            <g fill="#C3CAD6" fill-opacity="0.4">
-              <rect x="156" y="318" width="104" height="6" rx="3"/>
-              <rect x="156" y="332" width="84" height="6" rx="3"/>
-              <rect x="156" y="362" width="96" height="6" rx="3"/>
-              <rect x="156" y="376" width="66" height="6" rx="3"/>
-            </g>
-
-            <!-- moves -->
-            <g fill="none" stroke="#C3CAD6" stroke-width="1.25">
-              <rect x="54" y="408" width="107" height="34" rx="10"/>
-              <rect x="54" y="450" width="107" height="34" rx="10"/>
-              <rect x="169" y="450" width="107" height="34" rx="10"/>
-              <circle cx="70" cy="425" r="6"/>
-              <circle cx="185" cy="425" r="6"/>
-              <circle cx="70" cy="467" r="6"/>
-              <circle cx="185" cy="467" r="6"/>
-            </g>
-            <rect x="169" y="408" width="107" height="34" rx="10" fill="none" stroke="#D9AE3E" stroke-width="1.5"/>
-            <g fill="#C3CAD6" fill-opacity="0.45">
-              <rect x="82" y="422" width="58" height="6" rx="3"/>
-              <rect x="197" y="422" width="58" height="6" rx="3"/>
-              <rect x="82" y="464" width="50" height="6" rx="3"/>
-              <rect x="197" y="464" width="62" height="6" rx="3"/>
-            </g>
-
-            <!-- partners -->
-            <rect x="54" y="502" width="90" height="8" rx="4" fill="#C3CAD6" fill-opacity="0.6"/>
-            <g fill="rgba(26,41,70,0.9)" stroke="#C3CAD6" stroke-width="1.25">
-              <circle cx="66" cy="534" r="11"/>
-              <circle cx="84" cy="534" r="11"/>
-              <circle cx="66" cy="568" r="11"/>
-              <circle cx="84" cy="568" r="11"/>
-            </g>
-            <g fill="#C3CAD6" fill-opacity="0.45">
-              <rect x="104" y="531" width="66" height="6" rx="3"/>
-              <rect x="104" y="565" width="56" height="6" rx="3"/>
-            </g>
-            <g fill="none" stroke="#C3CAD6" stroke-opacity="0.5" stroke-width="1.25">
-              <rect x="186" y="530" width="90" height="8" rx="4"/>
-              <rect x="186" y="564" width="90" height="8" rx="4"/>
-            </g>
-            <g fill="#D9AE3E">
-              <rect x="186" y="530" width="68" height="8" rx="4"/>
-              <rect x="186" y="564" width="52" height="8" rx="4"/>
-            </g>
-            <rect x="135" y="596" width="60" height="4" rx="2" fill="#C3CAD6" fill-opacity="0.35"/>
-          </svg>
-
-          <svg class="leaders" viewBox="0 0 680 640" aria-hidden="true">
-            <path style="--i:0" pathLength="1" d="M252 275H318V215H346"/>
-            <path style="--i:1" pathLength="1" d="M131.5 354H318V335H346"/>
-            <path style="--i:2" pathLength="1" d="M276 425H318V455H346"/>
-            <path style="--i:3" pathLength="1" d="M254 534H318V575H346"/>
-            <circle class="node" style="--i:0" cx="252" cy="275" r="5"/>
-            <circle class="node" style="--i:1" cx="131.5" cy="354" r="5"/>
-            <circle class="node" style="--i:2" cx="276" cy="425" r="5"/>
-            <circle class="node" style="--i:3" cx="254" cy="534" r="5"/>
+          <svg class="leaders" viewBox="0 0 680 646" aria-hidden="true">
+            <path style="--i:0" pathLength="1" d="M248 194H322V150H350"/>
+            <path style="--i:1" pathLength="1" d="M267 256H322V290H350"/>
+            <path style="--i:2" pathLength="1" d="M278 473H322V440H350"/>
+            <path style="--i:3" pathLength="1" d="M283 592H350"/>
+            <circle class="node" style="--i:0" cx="248" cy="194" r="5"/>
+            <circle class="node" style="--i:1" cx="267" cy="256" r="5"/>
+            <circle class="node" style="--i:2" cx="278" cy="473" r="5"/>
+            <circle class="node" style="--i:3" cx="283" cy="592" r="5"/>
           </svg>
 
           <ul class="callouts">
-            <li class="callout" style="--y:215; --i:0">
-              <h2 class="callout-title">Role tags</h2>
-              <p>Roles come from stats and moves, so the gaps in your team stand out.</p>
+            <li class="callout" style="--y:150; --i:0">
+              <h2 class="callout-title">Pokédex or Roster</h2>
+              <p>Build from every Pokémon, or only from the Roster you have in your game.</p>
             </li>
-            <li class="callout" style="--y:335; --i:1">
-              <h2 class="callout-title">Team rating <span class="premium">Premium</span></h2>
-              <p>A score from 0 to 100, with the reasons behind it.</p>
+            <li class="callout" style="--y:290; --i:1">
+              <h2 class="callout-title">Complete sets</h2>
+              <p>Each slot keeps its ability, item and four moves.</p>
             </li>
-            <li class="callout" style="--y:455; --i:2">
-              <h2 class="callout-title">Move optimizer <span class="premium">Premium</span></h2>
-              <p>Finds the four moves that cover the most types.</p>
+            <li class="callout" style="--y:440; --i:2">
+              <h2 class="callout-title">Role suggestions</h2>
+              <p>Auto-assigned roles show what your team is missing, with Pokémon that fill the gap.</p>
             </li>
-            <li class="callout" style="--y:575; --i:3">
-              <h2 class="callout-title">Partner win rates</h2>
-              <p>See which partners win together most, from millions of battles.</p>
+            <li class="callout" style="--y:592; --i:3">
+              <h2 class="callout-title">Coverage and matchups</h2>
+              <p>See how your whole team attacks and defends against every type.</p>
             </li>
           </ul>
         </figure>
@@ -751,7 +660,7 @@
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1.5"/><circle cx="4.5" cy="12" r="1.5"/><circle cx="4.5" cy="18" r="1.5"/></svg>
             <div>
               <h3 class="spec-title">Roster builder</h3>
-              <p>Add Pokémon from the Pokédex, scan screenshots from your game or import from Pokémon Showdown. Roles are assigned for you.</p>
+              <p>Recreate your in-game Roster by adding Pokémon from the Pokédex, scanning screenshots from your game (Premium) or importing from Pokémon Showdown. Roles are auto-assigned from stats and moves.</p>
             </div>
           </li>
           <li class="spec">
@@ -765,7 +674,7 @@
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 17a8.5 8.5 0 0 1 17 0"/><path d="M12 17l4.5-5"/><circle cx="12" cy="17" r="1.2"/></svg>
             <div>
               <h3 class="spec-title">Team rating <span class="premium">Premium</span></h3>
-              <p>Score your team from 0 to 100 for casual or competitive play, with an explanation for every point.</p>
+              <p>Score your team from 0 to 100 for casual or competitive play, with an extensive analysis of its strengths and weaknesses.</p>
             </div>
           </li>
           <li class="spec">
@@ -792,8 +701,8 @@
           <li class="spec">
             <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="8.5" cy="8.5" r="1.1"/><circle cx="15.5" cy="15.5" r="1.1"/><circle cx="12" cy="12" r="1.1"/></svg>
             <div>
-              <h3 class="spec-title">Fun modes and quizzes</h3>
-              <p>Draft from random pools in Team Factory mode, build within a set cost in Budget mode (both Premium), or test your knowledge with quizzes.</p>
+              <h3 class="spec-title">Fun modes and quizzes <span class="premium">Premium</span></h3>
+              <p>Draft from random pools in Team Factory mode or build within a set cost in Budget mode. Quizzes to test your knowledge are free for everyone.</p>
             </div>
           </li>
         </ul>
@@ -806,10 +715,6 @@
         <p class="section-lede">Scroll sideways to see more screens.</p>
       </div>
       <ul class="shots">
-        <li class="shot">
-          <div class="shot-frame"><img src="screens/team-builder.webp" width="540" height="1212" loading="lazy" alt="Team builder screen with a Pokémon, its four moves and suggestions for roles the team still needs"></div>
-          <p class="shot-caption">Team builder</p>
-        </li>
         <li class="shot">
           <div class="shot-frame"><img src="screens/team-rating.webp" width="540" height="1212" loading="lazy" alt="Team rating screen showing offense, meta pressure and coverage suggestions for a team of six"></div>
           <p class="shot-caption">Team rating</p>
